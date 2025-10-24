@@ -1,4 +1,5 @@
-
+/* -------------------------------------------------- */
+/* Allgemeine Styles für body mit Tabs */
 body:has(main .tabs) {
   --accent: #ff70b5;
   --code: #ff70b5;
@@ -28,14 +29,16 @@ body:has(main .tabs) .header__age-warning::after {
   font-size: 0.9rem;
 }
 
-turbo-frame#link_53253 {
+/* -------------------------------------------------- */
+/* Alle turbo-frame-IDs, die mit "link_" anfangen */
+turbo-frame[id^="link_"] {
   --accent: #ff70b5;
   --text: #c7ccd1;
   --bg: #1b1d23;
   --accent-bg: var(--bg);
 }
 
-turbo-frame#link_53253 h3 {
+turbo-frame[id^="link_"] h3 {
   text-shadow:
     -2px -2px 0 var(--bg),
     2px -2px 0 var(--bg),
@@ -43,23 +46,23 @@ turbo-frame#link_53253 h3 {
     2px 2px 0 var(--bg);
 }
 
-turbo-frame#link_53253 .link {
+turbo-frame[id^="link_"] .link {
   gap: 0;
   padding: 5px;
   border: 2px solid var(--accent);
 }
 
-turbo-frame#link_53253 .link::after {
+turbo-frame[id^="link_"] .link::after {
   opacity: 0 !important;
 }
 
-turbo-frame#link_53253 .link--response,
-turbo-frame#link_53253 .link--response strong,
-turbo-frame#link_53253 .link--terms {
+turbo-frame[id^="link_"] .link--response,
+turbo-frame[id^="link_"] .link--response strong,
+turbo-frame[id^="link_"] .link--terms {
   color: var(--text);
 }
 
-turbo-frame#link_53253 .link--response {
+turbo-frame[id^="link_"] .link--response {
   background: var(--accent-bg);
   margin: -1.25rem 0 -1rem;
   border-top-left-radius: 0;
@@ -70,33 +73,35 @@ turbo-frame#link_53253 .link--response {
   box-shadow: inset 0 0 0 2px var(--accent);
 }
 
-turbo-frame#link_53253 .link--response::before {
+turbo-frame[id^="link_"] .link--response::before {
   content: none;
 }
 
-turbo-frame#link_53253 .link--backdrop {
+turbo-frame[id^="link_"] .link--backdrop {
   opacity: 1 !important;
 }
 
-turbo-frame#link_53253 .link--backdrop::before {
+turbo-frame[id^="link_"] .link--backdrop::before {
   background: 0 0 !important;
 }
 
-turbo-frame#link_53253 .link--backdrop img {
+turbo-frame[id^="link_"] .link--backdrop img {
   filter: contrast(1) brightness(0.5) !important;
 }
 
-turbo-frame#link_53253 .link--expires,
-turbo-frame#link_53253 .link--status-bar {
+turbo-frame[id^="link_"] .link--expires,
+turbo-frame[id^="link_"] .link--status-bar {
   display: none !important;
 }
 
-turbo-frame#link_53253 .link--abilities,
-turbo-frame#link_53253 .link--blacklist,
-turbo-frame#link_53253 .link--theme {
+turbo-frame[id^="link_"] .link--abilities,
+turbo-frame[id^="link_"] .link--blacklist,
+turbo-frame[id^="link_"] .link--theme {
   visibility: hidden !important;
 }
 
+/* -------------------------------------------------- */
+/* Mascot und andere Bilder */
 body:has(main .tabs) .mascot {
   content: url("https://static1.e621.net/data/91/47/91479234a60e836ff17b15f0807b2eee.gif");
   margin: -3px;
@@ -108,6 +113,8 @@ body:has(main .tabs) .perverted {
   content: url("https://static1.e621.net/data/a3/fd/a3fdca9f9fffc3ddb5eed05984d27153.gif");
 }
 
+/* -------------------------------------------------- */
+/* Header Styles */
 body:has(main .tabs) header h1 .show-mobile {
   font-size: 0;
   visibility: hidden;
@@ -143,6 +150,8 @@ body:has(main .tabs) .show-mobile::after {
   visibility: visible;
 }
 
+/* -------------------------------------------------- */
+/* Mascot Picker */
 body:has(main .tabs) turbo-frame.mascot-picker {
   font-size: 0;
 }
@@ -163,6 +172,8 @@ body:has(main .tabs) turbo-frame.mascot-picker::after {
   align-items: center;
 }
 
+/* -------------------------------------------------- */
+/* Sonstige Anpassungen */
 body:has(main .tabs) .hang div {
   visibility: hidden;
   z-index: 2;
