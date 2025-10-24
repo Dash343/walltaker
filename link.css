@@ -119,13 +119,13 @@ body:has(main .tabs) header h1 .show-mobile {
 }
 
 body:has(main .tabs) header h1 .show-mobile::before {
-  content: "DT";
+  content: "Toy";
   font-size: 1.5rem;
   visibility: visible;
 }
 
 body:has(main .tabs) header h1 .show-desktop::before {
-  content: "Deertaker";
+  content: "Walltaker";
   font-size: 3rem;
   visibility: visible;
 }
@@ -142,7 +142,7 @@ body:has(main .tabs) .show-mobile::after {
 }
 
 /* -------------------------------------------------- */
-/* Mascot Picker */
+/* Mascot Picker 
 body:has(main .tabs) turbo-frame.mascot-picker {
   font-size: 0;
 }
@@ -161,7 +161,7 @@ body:has(main .tabs) turbo-frame.mascot-picker::after {
   font-style: italic;
   display: flex;
   align-items: center;
-}
+}*/
 
 /* -------------------------------------------------- */
 /* Sonstige Anpassungen */
