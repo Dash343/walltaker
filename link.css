@@ -1,21 +1,23 @@
 /* -------------------------------------------------- */
 /* Allgemeine Styles für body mit Tabs */
 body:has(main .tabs) {
-  --accent: #ff70b5;
-  --code: #ff70b5;
-  --border: #c7ccd1;
+  --accent: #FC96EC;
+  --code: #FC96EC;
+  --border: #FEBEFE;
   --text: #c7ccd1;
   --text-light: #c7ccd1;
   --preformatted: #c7ccd1;
-  --bg: #1b1d23;
+  --bg: #25182F;
   --disabled: #1b1d23;
-  --accent-bg: #1b1d23;
+  --accent-bg: #372943;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 main:has(.tabs) {
   margin: -1.6rem -1rem;
-  padding: 1.6rem 1rem;
-  background-color: color-mix(in srgb, var(--accent) 5%, transparent);
+  padding: 4rem 3rem 3rem 3rem;
+  background-color: color-mix(in srgb, var(--bg) 50%, transparent);
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 
@@ -25,18 +27,18 @@ body:has(main .tabs) .header__age-warning {
 }
 
 body:has(main .tabs) .header__age-warning::after {
-    content: "Make me fill my diaper" "\A" "and humiliate me";
-    font-size: 0.9rem;
-    font-weight: bold;
-    white-space: pre; /* wichtig, damit \A als Umbruch angezeigt wird */
+  content: "Make me fill my diaper" "\A" "and humiliate me";
+  font-size: 0.9rem;
+  font-weight: bold;
+  white-space: pre !important;
 }
 
 /* -------------------------------------------------- */
 /* Alle turbo-frame-IDs, die mit "link_" anfangen */
 turbo-frame[id^="link_"] {
-  --accent: #ff70b5;
+  --accent: #FC96EC;
   --text: #c7ccd1;
-  --bg: #1b1d23;
+  --bg: #25182F;
   --accent-bg: var(--bg);
 }
 
@@ -50,45 +52,47 @@ turbo-frame[id^="link_"] h3 {
 
 turbo-frame[id^="link_"] .link {
   gap: 0;
-  padding: 5px;
-  border: 2px solid var(--accent);
+  padding: 15px !important;
+  border: 2px solid var(--accent) !important;
 }
 
 turbo-frame[id^="link_"] .link::after {
-  opacity: 0 !important;
+  opacity: 0.3 !important;
+  content: "" !important;
 }
 
 turbo-frame[id^="link_"] .link--response,
 turbo-frame[id^="link_"] .link--response strong,
 turbo-frame[id^="link_"] .link--terms {
-  color: var(--text);
+  color: var(--text) !important;
 }
 
 turbo-frame[id^="link_"] .link--response {
-  background: var(--accent-bg);
-  margin: -1.25rem 0 -1rem;
-  border-top-left-radius: 0;
-  animation: none;
-  transform: translateY(0);
-  max-height: 15px;
-  opacity: 1;
-  box-shadow: inset 0 0 0 2px var(--accent);
+  background: var(--accent-bg) !important;
+  margin: 0.1rem 0 0rem !important;
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  animation: none !important;
+  transform: translateY(0) !important;
+  max-height: 15px !important;
+  opacity: 1 !important;
+  box-shadow: inset 0 0 0 2px var(--accent) !important;
 }
 
 turbo-frame[id^="link_"] .link--response::before {
-  content: none;
+  content: none !important;
 }
 
 turbo-frame[id^="link_"] .link--backdrop {
-  opacity: 1 !important;
+  opacity: 0.7 !important;
 }
 
 turbo-frame[id^="link_"] .link--backdrop::before {
-  background: 0 0 !important;
+  background: transparent !important;
 }
 
 turbo-frame[id^="link_"] .link--backdrop img {
-  filter: contrast(1) brightness(0.5) !important;
+  filter: contrast(1) brightness(1) !important;
 }
 
 turbo-frame[id^="link_"] .link--expires,
@@ -102,70 +106,106 @@ turbo-frame[id^="link_"] .link--theme {
   visibility: hidden !important;
 }
 
+turbo-frame[id^="link_"] .link--blacklist {
+  color: var(--code) !important;
+  background-color: rgba(128, 128, 128, 0.7) !important;
+}
+
 /* -------------------------------------------------- */
 /* Mascot und andere Bilder */
 body:has(main .tabs) .mascot {
-    content: url(https://i.imgur.com/E7UwpqF.png);
-    padding: 1px;
-    padding-right: 60px;
+  content: url("https://i.imgur.com/E7UwpqF.png") !important;
+  padding: 12px !important;
+  padding-right: 60px !important;
+  clip-path: inset(33px 0 0 0) !important;
+  bottom: -23px !important;
 }
 
+body:has(main .tabs) .perverted {
+  content: url("https://static1.e621.net/data/a3/fd/a3fdca9f9fffc3ddb5eed05984d27153.gif") !important;
+}
 
 /* -------------------------------------------------- */
 /* Header Styles */
 body:has(main .tabs) header h1 .show-mobile {
-  font-size: 0;
-  visibility: hidden;
+  font-size: 0 !important;
+  visibility: hidden !important;
 }
 
 body:has(main .tabs) header h1 .show-mobile::before {
-  content: "Toy";
-  font-size: 1.5rem;
-  visibility: visible;
+  content: "Toy" !important;
+  font-size: 3.3rem !important;
+  position: relative !important;
+  font-weight: bold !important;
+  visibility: visible !important;
 }
 
 body:has(main .tabs) header h1 .show-desktop::before {
-  content: "Walltaker";
-  font-size: 3rem;
-  visibility: visible;
+  content: "Deertaker" !important;
+  font-size: 3rem !important;
+  visibility: visible !important;
 }
 
 body:has(main .tabs) header h1 .show-desktop {
-  font-size: 0;
+  font-size: 0 !important;
 }
 
 body:has(main .tabs) .show-mobile::after {
-    content: 'Toy';
-    font-size: 3.3rem;
-    position: relative;
-    font-weight: bold;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -45px;
+  left: -50px;
+  width: 70px;
+  height: 70px;
+  background-image: url("https://static1.e621.net/data/dd/0f/dd0fefae2cee952bdce54b2344bc21e8.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  visibility: visible;
 }
 
 /* -------------------------------------------------- */
-/* Mascot Picker 
+/* Mascot Picker */
 body:has(main .tabs) turbo-frame.mascot-picker {
-  font-size: 0;
+  font-size: 0 !important;
 }
 
 body:has(main .tabs) turbo-frame.mascot-picker form[action="/api/pervert/toggle"] {
-  z-index: 10;
+  z-index: 10 !important;
 }
 
 body:has(main .tabs) turbo-frame.mascot-picker form[action="/api/mascot/next"] {
-  display: none;
+  display: none !important;
 }
 
 body:has(main .tabs) turbo-frame.mascot-picker::after {
-  content: 'Deer 💖';
-  font-size: 0.7rem;
-  font-style: italic;
-  display: flex;
-  align-items: center;
-}*/
+  content: 'Deer 💖' !important;
+  font-size: 0.7rem !important;
+  font-style: italic !important;
+  display: flex !important;
+  align-items: center !important;
+}
 
 /* -------------------------------------------------- */
 /* Sonstige Anpassungen */
 body:has(main .tabs) .hang div {
-  visibility: hidden;
-  z-index: 2;
+  visibility: hidden !important;
+  z-index: 2 !important;
+}
+
+/* -------------------------------------------------- */
+/* Hintergrundbild */
+body {
+  background-image: url("https://static1.e621.net/data/74/e4/74e41929a5bf02181e5d0cb68e6c93a0.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+}
+
+/* -------------------------------------------------- */
+/* Responsive Anpassungen */
+@media screen and (max-width: 1300px) {
+  .mailbox_link, .browser_link {
+    transform: scale(0.3) !important;
+  }
 }
