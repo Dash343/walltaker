@@ -1,0 +1,441 @@
+/* Import Font for CSS use */
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;display=swap');
+
+/*Oberen info text anpassen*/
+.header__age-warning {
+    font-size: 0rem;
+}
+.header__age-warning::after {
+    content: "Make me fill my diaper" "\A" "and humiliate me";
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: pre; /* wichtig, damit \A als Umbruch angezeigt wird */
+}
+
+
+/* Username Sparkles */
+.sparkly-username {
+    position: absolute;
+    top: 122px;   /* ggf. anpassen bis es genau sitzt */
+    left: 85px;  /* ggf. anpassen bis es genau sitzt */
+    z-index: 999;
+}
+/* Sparkly text farbe */
+.sparkly-username sparkly-text {
+    --sparkly-text-color: lightpink; /* Farbe einstellen */
+    font-size: 35px;            /* Schriftgröße */
+    line-height: 1;
+}
+
+/* 1. Original-Username einfärben
+span[data-controller="user-reference"] {
+    color: gold !important;
+} */
+
+
+/*Text unter Namen*/
+.gios-user-grid::before {
+  content: "Naughty Diaper Toy ❤️";
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #FEBEFE;
+  grid-column: 1 / 3;
+}
+
+
+/*Obere Leiste (bei Walltaker) anpassen*/
+/* header {
+    background-image: url(https://files.catbox.moe/6tb33g.png) !important;
+    background-size: 100% !important;
+    background-position: 50% 50% !important;
+}*/
+
+
+/*Walltaker ersetzen*/
+/*
+.show-desktop {
+    font-size: 0;
+}
+.show-desktop::after {
+    content: 'Diaper Toy';
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+}*/
+/*Walltaker auf Mobil ersetzen*/
+.show-mobile {
+    font-size: 0;
+}
+.show-mobile::after {
+    content: 'Toy';
+    font-size: 3.3rem;
+    position: relative;
+    font-weight: bold;
+}
+
+
+/*Umrahmungen etc. färben*/
+:root:not(.force-light){
+    --code: #FC96EC;
+    --border: #FEBEFE;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Change root colour scheme and font if needed */
+:root:not(.force-light) {
+    --accent: #FC96EC;
+    --bg: #25182F;
+    --accent-bg: #372943;
+}
+
+/* Restlichen text einfärben
+body {
+    color: #06ddae;
+}
+*/
+
+
+/*Zahl neben Trophahe ausblenden*/
+.text-charm small {
+  font-size: 0;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.2s ease;
+}
+/*Blendet Zahl beim druberhovern ein*/
+.text-charm:hover small {
+  font-size: 0.5em;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Posizion und animation von Cadance */
+.Cadance {
+    position: fixed;
+    display: block;
+    width: 624px;
+    height: auto;
+    opacity: 0.7;
+    top: 1900px;
+    left: -572px;
+    z-index: -1;
+    animation: mover 4s infinite ease alternate-reverse;
+}
+/* Posizion und animation von Aquana */
+.Aquana {
+    position: fixed;
+    display: block;
+    width: 624px;
+    height: auto;
+    opacity: 0.8;
+    top: 850px;
+    left: 800px;
+    z-index: -1;
+    animation: mover 3s infinite ease alternate;
+}
+.Arh {
+    position: fixed;
+    display: block;
+    width: 624px;
+    height: auto;
+    opacity: 0.8;
+    bottom: -85px;
+    left: 720px;
+    z-index: -1;
+    animation: mover 3s infinite ease alternate;
+}
+
+/* Provide animation */
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-40px); }
+}
+/*nichtmehr ganz sicher*/
+@media screen and (max-width: 1300px) {
+  .mailbox_link, .browser_link {
+    transform: scale(0.3);
+  }
+}
+
+
+/* Hintergrundbild */
+body {
+  background-image: url("https://static1.e621.net/data/74/e4/74e41929a5bf02181e5d0cb68e6c93a0.png");
+  /*Nachtara https://static1.e621.net/data/ce/61/ce61587a42371c22763c9b28fe552a0f.jpg
+  Flamara https://static1.e621.net/data/92/15/921506953520ce666809cd6ab4516926.jpg
+  Nachtara und Flamara https://static1.e621.net/data/74/e4/74e41929a5bf02181e5d0cb68e6c93a0.png
+  Pika https://static1.e621.net/data/70/32/703288e97b9affb510128327895ae61a.png
+  Zorua https://static1.e621.net/data/6f/2e/6f2eed5c8e3a198654b667110663bd2c.jpg
+  Eevee snoof https://static1.e621.net/data/af/76/af7659b470f706174771d9caab60ef48.jpg*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Transparenter Mittelstreifen */
+main {
+    /*margin: -1.6rem;*/
+    padding: 4rem 3rem 3rem 3rem;
+    background-color: color-mix(in srgb, var(--bg) 50%, transparent);
+    backdrop-filter: blur(5px);
+}
+
+/* Anderes Mascotchen */
+.mascot {
+    content: url(https://i.imgur.com/E7UwpqF.png);
+    padding: 12px;
+    padding-right: 60px;
+}
+
+/* Ramen um Kinks */
+.kinks {
+    padding: 16px;
+    border: 9px #FF99FF;
+    border-style: groove;
+}
+
+
+.favs {
+  text-align: center;
+}
+/* Align Fav images into a grid and make them evenly sized */
+.fav-images {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.fav-images img {
+    object-fit: cover;
+    aspect-ratio: 1.2;
+    min-width: 100%;
+    width:100%;
+    height:auto;
+    border-radius: 4rem;
+}
+
+
+/* Telegram etc. */
+.links {
+  text-align: center;
+  margin-top: -49px; /* optional */
+  h2 {
+  border-bottom: none;
+}
+}
+
+.about_me {
+  text-align: center;
+  margin-top: 40px; /* optional */
+  padding: 16px;
+  padding-top: 0px;
+  border: 9px #FF99FF;
+  border-style: groove;
+  h2 {
+  border-bottom: none;
+}
+}
+
+/*Uhr*/
+.my_time {
+  text-align: center;
+  margin-top: 10px; /* optional */
+  h2 {
+  border-bottom: none;
+}
+}
+
+
+/* Walltaker Links */
+/* "See Full Profile" button verbergen*/
+.user-kennel .accent-block a.no-underline{
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* text farbe andern */
+.link--terms {
+    color: var(--text);
+}
+
+/* Shrink and style link blocks with added border */
+.link {
+    gap: 0;
+    padding: 15px;
+    border: 2px solid var(--accent);
+}
+
+/* Compact response box style */
+.link--response {
+    background: var(--accent-bg);
+    margin: 0.1rem 0 0rem;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    color: var(--text);
+    animation: none;
+    transform: translateY(0);
+    max-height: 15px;
+    opacity: 1;
+    box-shadow: inset 0 0 0 2px var(--accent);
+}
+.link--response strong {
+    color: var(--text);
+}
+.link--response::before {
+    content: none;
+}
+
+/* Transparenz, Kontrast und Helligkeit des Link Vorschau-Bildes */
+.link--backdrop {
+    opacity: 0.7 !important;
+}
+.link--backdrop img {
+    filter: contrast(1) brightness(1) !important;
+}
+
+/* Your Walltaker link ID transparency */
+.link::after {
+    opacity: 0.3;
+}
+/*hide link number*/
+.link::after {
+    content: "";
+}
+
+/*hide things from links*/
+/*
+.link--abilities,
+.link--blacklist,
+.link--theme {
+  visibility: hidden !important;
+}
+.link--expires,
+/*used Programm*/
+
+.link--status-bar {
+  display: none !important;
+}
+.link--blacklist {
+  color: var(--code) !important;
+  background-color: rgba(128, 128, 128, 0.7);
+}
+/*Link Bilder in farbe*/
+.link--backdrop::before {
+    background: transparent !important;
+}
+
+
+/*fave artists*/
+/*Anzeige der bilder und Namen*/
+.artist-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* neue zeile wenn zu breit */
+  justify-content: flex-start; /* gleichmäßiger abstand */
+}
+.artist-card {
+  width: 139px;
+}
+/*Bilder und Namen bei hovern animieren*/
+.card-wrapper {
+  position: relative;
+  width: 139px;
+  height: 139px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* gesamtes Feld animieren */
+}
+.card-wrapper:hover {
+  transform: scale(1.1); /* vergrößert das Bild */
+}
+.artist-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.artist-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 0;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background 0.3s ease;
+  display: block; /* wichtig */
+  box-sizing: border-box;
+}
+.card-wrapper:hover .artist-name {
+  background: rgba(0,0,0,0.7);
+}
+
+
+/*einfadendes overlay für Bild*/
+figure {
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden; /* wichtig fürs Zoom */
+}
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease; /* Bildbewegung */
+  will-change: transform;
+}
+/* Overlay */
+figure::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 80, 150, 0.4); /* rosanes transparentes Overlay */
+  z-index: 1; /* unter dem Text */
+  /* Startzustand: außerhalb des Bildes */
+  transform: translate(100%, 100%);
+  /* Anfang: oben links stark abgerundet */
+  border-radius: 800px 0 0 0;
+  /* Bewegung + Rundungswechsel */
+  transition: transform 0.4s ease, border-radius 0.4s ease;
+  pointer-events: none; /* &amp;amp;amp;amp;amp;amp;amp;amp;lt;&amp;amp;amp;amp;amp;amp;amp;amp;lt;&amp;amp;amp;amp;amp;amp;amp;amp;lt; Klicks durchlassen */
+}
+figure:hover::after {
+  transform: translate(0, 0);
+  border-radius: 5px;
+}
+
+/* Zoom-Effekt fürs Bild */
+figure:hover img {
+  transform: scale(1.1); /* leicht heranzoomen */
+}
+/*text auf dem Overlay*/
+figure figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 1.2em;
+  text-align: center;
+  z-index: 2; /* über dem Overlay */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+figure:hover figcaption {
+  opacity: 1;
+}
