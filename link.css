@@ -28,14 +28,14 @@ body:has(main .tabs) .header__age-warning::after {
   font-size: 0.9rem;
 }
 
-turbo-frame#link_50456 {
+turbo-frame#link_53253 {
   --accent: #ff70b5;
   --text: #c7ccd1;
   --bg: #1b1d23;
   --accent-bg: var(--bg);
 }
 
-turbo-frame#link_50456 h3 {
+turbo-frame#link_53253 h3 {
   text-shadow:
     -2px -2px 0 var(--bg),
     2px -2px 0 var(--bg),
@@ -43,23 +43,23 @@ turbo-frame#link_50456 h3 {
     2px 2px 0 var(--bg);
 }
 
-turbo-frame#link_50456 .link {
+turbo-frame#link_53253 .link {
   gap: 0;
   padding: 5px;
   border: 2px solid var(--accent);
 }
 
-turbo-frame#link_50456 .link::after {
+turbo-frame#link_53253 .link::after {
   opacity: 0 !important;
 }
 
-turbo-frame#link_50456 .link--response,
-turbo-frame#link_50456 .link--response strong,
-turbo-frame#link_50456 .link--terms {
+turbo-frame#link_53253 .link--response,
+turbo-frame#link_53253 .link--response strong,
+turbo-frame#link_53253 .link--terms {
   color: var(--text);
 }
 
-turbo-frame#link_50456 .link--response {
+turbo-frame#link_53253 .link--response {
   background: var(--accent-bg);
   margin: -1.25rem 0 -1rem;
   border-top-left-radius: 0;
@@ -70,30 +70,30 @@ turbo-frame#link_50456 .link--response {
   box-shadow: inset 0 0 0 2px var(--accent);
 }
 
-turbo-frame#link_50456 .link--response::before {
+turbo-frame#link_53253 .link--response::before {
   content: none;
 }
 
-turbo-frame#link_50456 .link--backdrop {
+turbo-frame#link_53253 .link--backdrop {
   opacity: 1 !important;
 }
 
-turbo-frame#link_50456 .link--backdrop::before {
+turbo-frame#link_53253 .link--backdrop::before {
   background: 0 0 !important;
 }
 
-turbo-frame#link_50456 .link--backdrop img {
+turbo-frame#link_53253 .link--backdrop img {
   filter: contrast(1) brightness(0.5) !important;
 }
 
-turbo-frame#link_50456 .link--expires,
-turbo-frame#link_50456 .link--status-bar {
+turbo-frame#link_53253 .link--expires,
+turbo-frame#link_53253 .link--status-bar {
   display: none !important;
 }
 
-turbo-frame#link_50456 .link--abilities,
-turbo-frame#link_50456 .link--blacklist,
-turbo-frame#link_50456 .link--theme {
+turbo-frame#link_53253 .link--abilities,
+turbo-frame#link_53253 .link--blacklist,
+turbo-frame#link_53253 .link--theme {
   visibility: hidden !important;
 }
 
