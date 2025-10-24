@@ -106,7 +106,7 @@ turbo-frame[id^="link_"] .link--theme {
 /* Mascot und andere Bilder */
 body:has(main .tabs) .mascot {
     content: url(https://i.imgur.com/E7UwpqF.png);
-    padding: 5px;
+    padding: 50px;
     padding-right: 60px;
 }
 
