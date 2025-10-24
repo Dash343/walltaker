@@ -1,0 +1,130 @@
+/* ------------------------------ */
+/* Header Age Warning */
+body:has(main .tabs) .header__age-warning {
+    font-size: 0rem;
+}
+body:has(main .tabs) .header__age-warning::after {
+    content: "Make me fill my diaper" "\A" "and humiliate me";
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: pre;
+}
+
+/* Walltaker auf Mobil ersetzen */
+body:has(main .tabs) .show-mobile {
+    font-size: 0;
+}
+body:has(main .tabs) .show-mobile::after {
+    content: 'Toy';
+    font-size: 3.3rem;
+    position: relative;
+    font-weight: bold;
+}
+
+/* Root variables und Fonts */
+:root:not(.force-light){
+    --code: #FC96EC;
+    --border: #FEBEFE;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+:root:not(.force-light) {
+    --accent: #FC96EC;
+    --bg: #25182F;
+    --accent-bg: #372943;
+}
+
+/* Responsives Scaling */
+@media screen and (max-width: 1300px) {
+  .mailbox_link, .browser_link {
+    transform: scale(0.3);
+  }
+}
+
+/* Hintergrundbild */
+body {
+  background-image: url("https://static1.e621.net/data/74/e4/74e41929a5bf02181e5d0cb68e6c93a0.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Transparenter Mittelstreifen */
+main {
+    padding: 4rem 3rem 3rem 3rem;
+    background-color: color-mix(in srgb, var(--bg) 50%, transparent);
+    backdrop-filter: blur(5px);
+}
+
+/* Anderes Mascotchen */
+.mascot {
+    content: url(https://i.imgur.com/E7UwpqF.png);
+    padding: 12px;
+    padding-right: 60px;
+}
+
+/* ------------------------------ */
+/* Turbo-frame Styles für alle IDs, die mit "link_" beginnen */
+turbo-frame[id^="link_"] {
+    --accent: var(--accent);
+    --text: var(--code);
+    --bg: var(--bg);
+    --accent-bg: var(--accent-bg);
+}
+
+/* Link Blöcke */
+turbo-frame[id^="link_"] .link {
+    gap: 0;
+    padding: 15px;
+    border: 2px solid var(--accent);
+}
+
+/* Response Box */
+turbo-frame[id^="link_"] .link--response {
+    background: var(--accent-bg);
+    margin: 0.1rem 0 0rem;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    color: var(--text);
+    animation: none;
+    transform: translateY(0);
+    max-height: 15px;
+    opacity: 1;
+    box-shadow: inset 0 0 0 2px var(--accent);
+}
+turbo-frame[id^="link_"] .link--response strong {
+    color: var(--text);
+}
+turbo-frame[id^="link_"] .link--response::before {
+    content: none;
+}
+
+/* Link Hintergrund / Backdrop */
+turbo-frame[id^="link_"] .link--backdrop {
+    opacity: 0.7 !important;
+}
+turbo-frame[id^="link_"] .link--backdrop img {
+    filter: contrast(1) brightness(1) !important;
+}
+turbo-frame[id^="link_"] .link--backdrop::before {
+    background: transparent !important;
+}
+
+/* Link ID Transparenz */
+turbo-frame[id^="link_"] .link::after {
+    content: "";
+    opacity: 0.3;
+}
+
+/* Status / Blacklist */
+turbo-frame[id^="link_"] .link--status-bar {
+    display: none !important;
+}
+turbo-frame[id^="link_"] .link--blacklist {
+    color: var(--code) !important;
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+/* Link Terms Farbe */
+turbo-frame[id^="link_"] .link--terms {
+    color: var(--text);
+}
