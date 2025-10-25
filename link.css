@@ -10,6 +10,12 @@ body:has(main .tabs) {
 --bg: #25182F;
 --disabled: #372943;
 --accent-bg: #372943;
+
+  background-image: url("https://static1.e621.net/data/74/e4/74e41929a5bf02181e5d0cb68e6c93a0.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--bg);
 }
 
 main:has(.tabs) {
@@ -39,11 +45,6 @@ turbo-frame[id^="link_"] {
 --text: #25182F;
 --bg: #372943;
 --accent-bg: var(--bg);
-
-  background-image: url("https://static1.e621.net/data/74/e4/74e41929a5bf02181e5d0cb68e6c93a0.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 turbo-frame[id^="link_"] h3 {
