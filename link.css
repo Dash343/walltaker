@@ -19,8 +19,14 @@ body:has(main .tabs) {
 }
 
 
-/* Overlay Blur nur für Unterseite mit .tabs */
-body:has(main .tabs)::before {
+
+
+/* Overlay nur für Unterseite mit .tabs */
+body:has(main .tabs) {
+  position: relative; /* damit ::before sich relativ zu body positionieren kann */
+}
+
+body:has(main .tabs) main::before {
   content: "";
   position: absolute;
   top: 0;
@@ -28,18 +34,18 @@ body:has(main .tabs)::before {
   width: 100%;
   height: 100%;
   
-  /* damit es unter main liegt */
-  z-index: 0;
-
-  /* Hintergrund durchsichtig, aber blur auf underlying content */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  /* optional leicht dunkeln */
-  background: rgba(0, 0, 0, 0.2);
+  z-index: 0; /* liegt unter allen main-Inhalten */
   
-  pointer-events: none; /* damit nichts blockiert wird */
+  backdrop-filter: blur(10px); /* der Blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  
+  background: rgba(0, 0, 0, 0.2); /* optional leichter dunkler Effekt */
+  
+  pointer-events: none; /* Buttons/Links bleiben klickbar */
+  
+  border-radius: inherit; /* falls main abgerundete Ecken hat */
 }
+
 
 
 
