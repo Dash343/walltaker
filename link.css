@@ -20,42 +20,6 @@ body:has(main .tabs) {
 
 
 
-/* -------------------------------------------------- */
-/* Main-Bereich für Blur */
-main:has(.tabs) {
-  position: relative; /* für Overlay */
-}
-
-/* Blur-Overlay nur innerhalb von Main:has(.tabs) */
-main:has(.tabs)::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-
-  background-color: rgba(37,24,47,0.5);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-
-  pointer-events: none; /* Content bleibt klickbar */
-  z-index: -1;          /* Overlay unter Main-Content */
-  border-radius: inherit;
-}
-
-/* Content über Overlay legen */
-main:has(.tabs) > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* -------------------------------------------------- */
-/* Spezifische Styles für Main mit Tabs */
-main:has(.tabs) {
-  margin: -1.6rem -1rem;
-  padding: 1.6rem 1rem;
-  background-color: color-mix(in srgb, var(--accent) 5%, transparent);
-  z-index: 1;
-}
 
 
 
