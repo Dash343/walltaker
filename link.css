@@ -37,7 +37,7 @@ body:has(main .tabs) main::before {
   width: 100%;
   height: 100%;
   
-  z-index: 0; /* Overlay unter den Inhalten */
+  z-index: -1; /* Overlay unter den Inhalten */
   
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
