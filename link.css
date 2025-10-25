@@ -156,7 +156,7 @@ body:has(main .tabs) turbo-frame.mascot-picker form[action="/api/mascot/next"] {
 }
 
 body:has(main .tabs) turbo-frame.mascot-picker::after {
- content: 'Deer 💖';
+ content: 'Toy 💖';
  font-size: 0.7rem;
  font-style: italic;
  display: flex;
