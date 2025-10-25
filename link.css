@@ -47,6 +47,15 @@ main:has(.tabs) > * {
   z-index: 1;  /* Content liegt über Blur */
 }
 
+/* Speziell die Sidebar wieder richtig positionieren */
+.comments-sidebar {
+  position: fixed;       /* bleibt an der Seite */
+  top: 50%;             /* vertikal zentriert */
+  right: 0;             /* rechts am Rand */
+  transform: translateY(-50%);
+  z-index: 10;          /* über Blur */
+}
+
 /* Falls es noch spezielle Elemente gibt, die tiefer liegen und sichtbar bleiben sollen */
 .turbo-frame, .mascot, .header__age-warning {
   position: relative;
