@@ -18,6 +18,13 @@ body:has(main .tabs) {
   background-color: var(--bg);
 }
 
+main {
+    /*margin: -1.6rem;*/
+    padding: 4rem 3rem 3rem 3rem;
+    background-color: color-mix(in srgb, var(--bg) 50%, transparent);
+    backdrop-filter: blur(5px);
+}
+
 main:has(.tabs) {
 margin: -1.6rem -1rem;
 padding: 1.6rem 1rem;
