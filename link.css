@@ -28,7 +28,7 @@ body:has(main .tabs) .header__age-warning::after {
 content: "Make me fill my diaper" "\A" "and humiliate me";
 font-size: 0.9rem;
 font-weight: bold;
---text: #c7ccd1;
+--text: #c7ccd1 !important;
 white-space: pre; /* wichtig, damit \A als Umbruch angezeigt wird */
 }
 
