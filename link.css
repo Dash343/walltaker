@@ -15,7 +15,8 @@ body:has(main .tabs) {
 main:has(.tabs) {
 margin: -1.6rem -1rem;
 padding: 1.6rem 1rem;
-background-color: color-mix(in srgb, var(--accent) 50%, transparent);
+background-color: color-mix(in srgb, var(--accent) 5%, transparent);
+backdrop-filter: blur(5px);
 z-index: 1;
 
   background-image: url("https://static1.e621.net/data/74/e4/74e41929a5bf02181e5d0cb68e6c93a0.png");
