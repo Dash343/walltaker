@@ -4,8 +4,6 @@ body:has(main .tabs) {
 --accent: #FC96EC;
 --code: #FC96EC;
 --border: #FEBEFE;
---text: #FEBEFE;
---text-light: #FEBEFE;
 --preformatted: #FEBEFE;
 --bg: #25182F;
 --disabled: #372943;
