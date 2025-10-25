@@ -18,20 +18,21 @@ body:has(main .tabs) {
   background-color: var(--bg);
 }
 
-main {
-  position: relative;
-  z-index: 1; /* liegt über dem Hintergrund */
-  padding: 4rem 3rem 3rem 3rem;
-  border-radius: 16px;
-  overflow: hidden; /* Blur bleibt im Container */
-  
-  background-color: rgba(37, 24, 47, 0.5); /* halbtransparent */
+body:has(main) main::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+
+  background-color: rgba(37,24,47,0.5);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari Unterstützung */
-  
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25); /* weicher Schatten für Tiefe */
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+  z-index: 0;
+  pointer-events: none; /* Content bleibt klickbar */
 }
+
 
 
 main:has(.tabs) {
