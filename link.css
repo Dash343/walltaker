@@ -134,7 +134,7 @@ filter: contrast(1) brightness(1) !important;
 
 turbo-frame[id^="link_"] .link--expires,
 turbo-frame[id^="link_"] .link--status-bar {
-display: block !important;
+display: none !important; 
 }
 
 turbo-frame[id^="link_"] .link--abilities,
