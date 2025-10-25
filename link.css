@@ -18,21 +18,29 @@ body:has(main .tabs) {
   background-color: var(--bg);
 }
 
-body:has(main) main::before {
+main {
+  position: relative;  /* für Overlay */
+  z-index: 1;          /* Content über Overlay */
+  padding: 4rem 3rem 3rem 3rem;
+}
+
+/* -------------------------------------------------- */
+/* Blur-Overlay nur für Main */
+main::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
 
-  background-color: rgba(37,24,47,0.5);
+  background-color: rgba(37,24,47,0.5);   /* Frosted Glass */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
   border-radius: 16px;
-  z-index: 0;
+  z-index: 0;           /* unter Content */
   pointer-events: none; /* Content bleibt klickbar */
 }
-
 
 
 main:has(.tabs) {
