@@ -19,11 +19,20 @@ body:has(main .tabs) {
 }
 
 main {
-    /*margin: -1.6rem;*/
-    padding: 4rem 3rem 3rem 3rem;
-    background-color: color-mix(in srgb, var(--bg) 50%, transparent);
-    backdrop-filter: blur(5px);
+  position: relative;
+  z-index: 1; /* liegt über dem Hintergrund */
+  padding: 4rem 3rem 3rem 3rem;
+  border-radius: 16px;
+  overflow: hidden; /* Blur bleibt im Container */
+  
+  background-color: rgba(37, 24, 47, 0.5); /* halbtransparent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari Unterstützung */
+  
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25); /* weicher Schatten für Tiefe */
 }
+
 
 main:has(.tabs) {
 margin: -1.6rem -1rem;
