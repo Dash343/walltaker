@@ -23,11 +23,6 @@ body:has(main .tabs) {
 
 
 
-/* Falls es noch spezielle Elemente gibt, die tiefer liegen und sichtbar bleiben sollen */
-.turbo-frame, .mascot, .header__age-warning {
-  position: relative;
-  z-index: 1;
-}
 
 body:has(main .tabs) .header__age-warning {
 font-size: 0;
