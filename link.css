@@ -18,57 +18,51 @@ body:has(main .tabs) {
   background-color: var(--bg);
 }
 
+
+
+/* -------------------------------------------------- */
+/* Main-Bereich für Blur */
 main:has(.tabs) {
-  position: relative;  
-  z-index: 1;           /* Main-Content liegt über Overlay */
-  padding: 4rem 3rem 3rem 3rem;
+  position: relative; /* für Overlay */
 }
 
-/* Overlay für Blur */
+/* Blur-Overlay nur innerhalb von Main:has(.tabs) */
 main:has(.tabs)::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
 
   background-color: rgba(37,24,47,0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
-  border-radius: 16px;
-  z-index: 0;            /* unter Content */
-  pointer-events: none;  /* Content bleibt klickbar */
+  pointer-events: none; /* Content bleibt klickbar */
+  z-index: -1;          /* Overlay unter Main-Content */
+  border-radius: inherit;
 }
 
-/* Wichtige Elemente über Overlay legen */
+/* Content über Overlay legen */
 main:has(.tabs) > * {
   position: relative;
-  z-index: 1;  /* Content liegt über Blur */
+  z-index: 1;
 }
 
-/* Speziell die Sidebar wieder richtig positionieren */
-.comments-sidebar {
-  position: fixed;       /* bleibt an der Seite */
-  top: 50%;             /* vertikal zentriert */
-  right: 0;             /* rechts am Rand */
-  transform: translateY(-50%);
-  z-index: 10;          /* über Blur */
-}
-
-/* Falls es noch spezielle Elemente gibt, die tiefer liegen und sichtbar bleiben sollen */
-.turbo-frame, .mascot, .header__age-warning {
-  position: relative;
+/* -------------------------------------------------- */
+/* Spezifische Styles für Main mit Tabs */
+main:has(.tabs) {
+  margin: -1.6rem -1rem;
+  padding: 1.6rem 1rem;
+  background-color: color-mix(in srgb, var(--accent) 5%, transparent);
   z-index: 1;
 }
 
 
 
-main:has(.tabs) {
-margin: -1.6rem -1rem;
-padding: 1.6rem 1rem;
-background-color: color-mix(in srgb, var(--accent) 5%, transparent);
-z-index: 1;
+/* Falls es noch spezielle Elemente gibt, die tiefer liegen und sichtbar bleiben sollen */
+.turbo-frame, .mascot, .header__age-warning {
+  position: relative;
+  z-index: 1;
 }
 
 body:has(main .tabs) .header__age-warning {
