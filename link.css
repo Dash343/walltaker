@@ -142,7 +142,7 @@ turbo-frame[id^="link_"] .link--blacklist {
   color: var(--code) !important;
   background-color: rgba(128, 128, 128, 0.7);
 }
-turbo-frame[id^="link_"] .link--theme,
+/*turbo-frame[id^="link_"] .link--theme,
 
 /* -------------------------------------------------- */
 /* Mascot und andere Bilder */
