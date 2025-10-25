@@ -24,7 +24,6 @@ z-index: 1;
   background-position: center;
   border-radius: 12px; /* optional, falls du schöne Kanten willst */
 }
-}
 
 body:has(main .tabs) .header__age-warning {
 font-size: 0;
