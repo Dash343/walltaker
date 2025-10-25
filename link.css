@@ -142,7 +142,7 @@ font-weight: bold;
 }
 
 /* -------------------------------------------------- */
-/* Mascot Picker 
+/* Mascot Picker */
 body:has(main .tabs) turbo-frame.mascot-picker {
  font-size: 0;
 }
@@ -161,7 +161,7 @@ body:has(main .tabs) turbo-frame.mascot-picker::after {
  font-style: italic;
  display: flex;
  align-items: center;
-}*/
+}
 
 /* -------------------------------------------------- */
 /* Sonstige Anpassungen */
