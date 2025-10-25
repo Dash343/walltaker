@@ -21,40 +21,7 @@ body:has(main .tabs) {
 
 
 
-/* Stelle sicher, dass main als Bezugspunkt dient */
-body:has(main .tabs) main {
-  position: relative; /* neu hinzufügen */
-  z-index: 1; /* damit der Inhalt über dem Overlay liegt */
-}
 
-body:has(main .tabs) main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  
-  z-index: 0; /* Overlay unter den Inhalten */
-  
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  
-  background: rgba(0, 0, 0, 0.2); /* optional leicht dunkeln */
-  
-  pointer-events: none;
-  border-radius: inherit;
-}
-
-/* Elemente, die über dem Blur liegen sollen */
-body:has(main .tabs) main .bring-to-front,
-body:has(main .tabs) main header,
-body:has(main .tabs) main nav,
-body:has(main .tabs) main .tabs,
-body:has(main .tabs) main button {
-  position: relative; /* nötig für z-index */
-  z-index: 2; /* höher als Overlay */
-}
 
 
 
