@@ -1,15 +1,15 @@
 /* -------------------------------------------------- */
 /* Allgemeine Styles für body mit Tabs */
 body:has(main .tabs) {
---accent: #ff70b5;
---code: #ff70b5;
---border: #c7ccd1;
---text: #c7ccd1;
---text-light: #c7ccd1;
---preformatted: #c7ccd1;
---bg: #1b1d23;
---disabled: #1b1d23;
---accent-bg: #1b1d23;
+--accent: #FC96EC;
+--code: #FC96EC;
+--border: #FEBEFE;
+--text: #FEBEFE;
+--text-light: #FEBEFE;
+--preformatted: #FEBEFE;
+--bg: #25182F;
+--disabled: #372943;
+--accent-bg: #372943;
 }
 
 main:has(.tabs) {
@@ -34,9 +34,9 @@ white-space: pre; /* wichtig, damit \A als Umbruch angezeigt wird */
 /* -------------------------------------------------- */
 /* Alle turbo-frame-IDs, die mit "link_" anfangen */
 turbo-frame[id^="link_"] {
---accent: #ff70b5;
---text: #c7ccd1;
---bg: #1b1d23;
+--accent: #FC96EC;
+--text: #25182F;
+--bg: #372943;
 --accent-bg: var(--bg);
 }
 
