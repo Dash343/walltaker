@@ -18,14 +18,14 @@ body:has(main .tabs) {
   background-color: var(--bg);
 }
 
-main {
+main:has(.tabs) {
   position: relative;  
   z-index: 1;           /* Main-Content liegt über Overlay */
   padding: 4rem 3rem 3rem 3rem;
 }
 
 /* Overlay für Blur */
-main::before {
+main:has(.tabs)::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
@@ -42,7 +42,7 @@ main::before {
 }
 
 /* Wichtige Elemente über Overlay legen */
-main > * {
+main:has(.tabs) > * {
   position: relative;
   z-index: 1;  /* Content liegt über Blur */
 }
