@@ -121,24 +121,27 @@ content: none;
 }
 
 turbo-frame[id^="link_"] .link--backdrop {
-opacity: 1 !important;
+opacity: 0.7 !important;
 }
 
 turbo-frame[id^="link_"] .link--backdrop::before {
-background: 0 0 !important;
+background: transparent !important;
 }
 
 turbo-frame[id^="link_"] .link--backdrop img {
-filter: contrast(1) brightness(0.5) !important;
+filter: contrast(1) brightness(1) !important;
 }
 
 turbo-frame[id^="link_"] .link--expires,
 turbo-frame[id^="link_"] .link--status-bar {
-display: none !important;
+display: block !important;
 }
 
 turbo-frame[id^="link_"] .link--abilities,
-turbo-frame[id^="link_"] .link--blacklist,
+turbo-frame[id^="link_"] .link--blacklist {
+  color: var(--code) !important;
+  background-color: rgba(128, 128, 128, 0.7);
+}
 turbo-frame[id^="link_"] .link--theme {
 visibility: hidden !important;
 }
