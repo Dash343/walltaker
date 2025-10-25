@@ -46,7 +46,15 @@ body:has(main .tabs) main::before {
   border-radius: inherit;
 }
 
-
+/* Elemente, die über dem Blur liegen sollen */
+body:has(main .tabs) main .bring-to-front,
+body:has(main .tabs) main header,
+body:has(main .tabs) main nav,
+body:has(main .tabs) main .tabs,
+body:has(main .tabs) main button {
+  position: relative; /* nötig für z-index */
+  z-index: 2; /* höher als Overlay */
+}
 
 
 
