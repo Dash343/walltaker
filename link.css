@@ -19,13 +19,12 @@ body:has(main .tabs) {
 }
 
 main {
-  position: relative;  /* für Overlay */
-  z-index: 1;          /* Content über Overlay */
+  position: relative;  
+  z-index: 1;           /* Main-Content liegt über Overlay */
   padding: 4rem 3rem 3rem 3rem;
 }
 
-/* -------------------------------------------------- */
-/* Blur-Overlay nur für Main */
+/* Overlay für Blur */
 main::before {
   content: "";
   position: absolute;
@@ -33,14 +32,27 @@ main::before {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(37,24,47,0.5);   /* Frosted Glass */
+  background-color: rgba(37,24,47,0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
   border-radius: 16px;
-  z-index: 0;           /* unter Content */
-  pointer-events: none; /* Content bleibt klickbar */
+  z-index: 0;            /* unter Content */
+  pointer-events: none;  /* Content bleibt klickbar */
 }
+
+/* Wichtige Elemente über Overlay legen */
+main > * {
+  position: relative;
+  z-index: 1;  /* Content liegt über Blur */
+}
+
+/* Falls es noch spezielle Elemente gibt, die tiefer liegen und sichtbar bleiben sollen */
+.turbo-frame, .mascot, .header__age-warning {
+  position: relative;
+  z-index: 1;
+}
+
 
 
 main:has(.tabs) {
