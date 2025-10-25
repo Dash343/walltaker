@@ -17,6 +17,13 @@ margin: -1.6rem -1rem;
 padding: 1.6rem 1rem;
 background-color: color-mix(in srgb, var(--accent) 5%, transparent);
 z-index: 1;
+
+  background-image: url("https://static1.e621.net/data/74/e4/74e41929a5bf02181e5d0cb68e6c93a0.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px; /* optional, falls du schöne Kanten willst */
+}
 }
 
 body:has(main .tabs) .header__age-warning {
